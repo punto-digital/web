@@ -1,0 +1,301 @@
+*{
+    box-sizing: border-box;
+}
+$color-azul:rgb(20, 84, 221);
+$color-blanco:rgb(255, 255, 237);
+$titulos: 'Do Hyeon', sans-serif;
+$texto: 'Open Sans', sans-serif;
+body{
+    margin: 0;
+    background-color: $color-blanco;
+}
+
+.cabecera-principal{
+    background-color: $color-azul;
+    box-shadow: 0px 5px 10px hsla(0, 0, 0, .5);
+}
+.wrapper{
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+.contenedor-logoytexto{
+    display: flex;
+    color: $color-blanco;
+    font-family: $titulos;
+}
+.contenedor-titulo{
+    h1{margin-bottom: 0px;}
+    h3{margin-top: 0px;
+    text-align: right;}
+}
+.logo{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-right: 50px;
+}
+
+.menu-principal{
+    color: $color-blanco;
+    &__lista{
+        margin-bottom: 0px;
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .active{
+        background-color: rgb(148, 7, 129);
+    
+    }
+    &__item{
+        .link{
+            color: $color-blanco;
+            text-decoration: none;
+            text-transform: uppercase;
+            // font-weight: 700;
+        }
+        padding-left: 1em;
+        padding-right: 1em;
+        font-family: $texto;
+        background-color: transparent;
+        border-radius: 50px;
+        transition: all .5s ease-in-out;
+        &:hover{
+            background-color: rgb(21, 7, 148);
+        }
+        
+    }
+}
+/*--- Fin de Header ---*/
+
+.banner{
+    overflow: hidden;
+    height: 75vh;
+    position: relative;
+    &__img{
+        display: block;
+        width: 100%;
+        position: absolute;
+        top:0;
+        left: 0;
+    }
+    &__contenido{
+        position: absolute;
+        top:40%;
+        right: 50%;
+        transform: translate(50%,0);
+        z-index: 1000;
+        color: $color-blanco;
+        text-align: center;
+        text-shadow: 2px 2px 2px black;
+        font-family: $titulos;
+        background-color: hsla(0, 0, 0, .5);
+        width:100vw;
+    }
+    &__titulo{
+        font-size: 3em;
+        margin-bottom: 0;
+    }
+}
+
+/* --- Fin de Banner --- */
+
+.olimpiadas{
+    text-align: center;
+    background-color: #eee;
+    &__titulo{
+        font-size: 5em;
+        width: 85%;
+        margin: 0 auto;
+        font-family:$titulos;
+        margin-bottom: .5em;
+    }
+    &__texto{
+        margin: 0 auto;
+        width:60%; 
+        text-align: justify;
+        font-family: $texto;
+        margin-bottom: 1em;
+    }
+    margin-bottom: 2em;
+    padding-bottom:1em;
+}
+.boton{
+    display:table;
+    padding: .5em 1em;
+    background-color: rgb(27, 80, 196);
+    margin-left: 80%;
+    text-transform: uppercase;
+    color: white;
+    font-weight:700;
+    font-family: $texto;
+    text-decoration: none;
+    line-height: 1.5em;
+    justify-content: center;
+}
+.margen-abajo{
+    margin-top: 1em;
+    margin-bottom: 5em;
+}
+
+/* Estilos del FOOTER */
+.main-footer{
+    background-color: rgb(27, 80, 196);
+    padding-bottom: 1em;
+}
+.social{
+    margin: 0 auto;
+    width: 25%;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+}
+.icono{
+    overflow: hidden;
+    display: block;
+    border-radius: 50%;
+    
+}
+.icono img{
+    width: 70px;
+    height: 70px;
+}
+.legal{
+    margin-bottom: 0;
+    color: #fff;
+    font-family: sans-serif;
+    font-size: .7em;
+    text-align: center;
+}
+
+/* Estilos para las tarjetas de Podcast */
+
+.podcast{
+    // height: 200px;
+    width: 600px;
+    background-color: #fff;
+    box-shadow: 3px 3px 10px hsla(0, 0, 0, .4);
+    border-radius: 5px;
+    margin: 2em auto;
+    &__descripcion{
+        padding-top: 1em;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    &__titulo{
+        text-align: center;
+        margin-top: 0;
+        font-size: 2.5em;
+        font-family: $titulos;
+    }
+    &__subtitulo{
+        font-family: $texto;
+        font-size: 1.5em;
+    }
+    &__audio{
+        width: 100%;
+    }
+}
+.post__icon{
+    margin-top: 2em;
+    height: 150px;
+    width: 150px;
+}
+.post__img{
+    display: block;
+    margin: 1em auto;
+    width: 60%;
+}
+
+// Estilos de pagina TALLERES
+// -----EN PROCESO------
+.titulo{
+    font-size: 3em;
+    font-family: $titulos;
+}
+.mediano{
+    font-size: 1.5em;
+}
+.taller{
+    width: 47%;
+    box-shadow: 3px 3px 10px grey;
+    margin: .5em;
+    &__container{
+        background-color: rgba(25, 98, 255, 0.781);
+        color: $color-blanco;
+    }
+    &__title{
+        font-family: $titulos;
+        font-size: 2.5em;
+        text-align: center;
+        margin-top: 0;
+        padding-top: .5em;
+    }
+    &__description{
+        padding-left: 2em;
+        font-family: $texto;
+    }
+    &__img{
+        display: block;
+        width: 100%;
+    }
+}
+
+.flex-wrap{
+    display:flex;
+    flex-wrap: wrap;
+}
+//BANDERA LGBT
+.diversidad-sexual{
+    margin:0 auto;
+    width: 70%;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+.bandera{
+    // margin: 0 auto;
+    width: 100px;
+    height: 80px;
+    overflow: hidden;
+    transition: all .3s ease-in;
+    font-family: $titulos;
+    &:hover{
+        width: 100%;
+    }
+    &__texto{
+        text-align: center;
+        color: white;
+        font-size: 3em;
+        margin: 0;
+        line-height: 2em;
+        // width: 0%;
+        opacity: 0;
+        overflow: hidden;
+        transition: all .9s ease-in;
+    }
+    &:hover .bandera__texto{
+        width: 100%;
+        opacity: 1;
+    }
+}
+.verde{
+    background-color:rgb(2, 175, 2);
+}
+.roja{
+    background-color:red;
+}
+.azul{
+    background-color:rgb(0, 60, 255);
+}
+.amarilla{
+    background-color:rgb(241, 241, 0);
+}
+.naranja{
+    background-color:rgb(255, 124, 17);
+}
+.violeta{
+    background-color:purple;
+}
